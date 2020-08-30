@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="col s6">
+        <h2>Топ 5 вакансий</h2>
+        {{#each vacancy}}
+        <a href={{href}}> <p>{{offer}}</p></a>
+        {{/each}}
+      </div>
+      <div class="col s6">
+        <h2>Топ 5 резюме</h2>
+        {{#each cv}}
+        <a href={{href}}> <p>{{position}}</p></a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

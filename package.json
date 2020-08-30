@@ -1,0 +1,42 @@
+{
+  "name": "teamproject",
+  "version": "1.0.0",
+  "description": "job websites parser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glow27/job-websites-parser.git"
+  },
+  "keywords": [
+    "job"
+  ],
+  "author": "Flunt1k, glow27",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glow27/job-websites-parser/issues"
+  },
+  "homepage": "https://github.com/glow27/job-websites-parser#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.10.0",
+    "morgan": "^1.10.0",
+    "node-gyp": "^7.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.2",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+  }
+}

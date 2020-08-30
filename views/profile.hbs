@@ -1,0 +1,16 @@
+<div class="container">
+    <h3>Имя пользователя: {{user.username}}</h3>
+    {{#if typeOfProfile}}
+        <h3>Статус пользователя: Соискатель</h3>
+        <h3>Резюме пользователя: </h3>
+        <ul>
+        {{#each user.wantToWork}}
+            <li><h4>{{@index}}. {{this}}</h4></li>
+        {{/each}}
+        </ul>
+    {{else}}
+        <h3>Статус пользователя: Работодатель</h3>
+    {{/if}}
+</div>
+
+

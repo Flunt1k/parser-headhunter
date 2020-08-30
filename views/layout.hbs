@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script defer src="/js/registration.js"></script>
+    <script defer src="/js/login.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<nav class="nav-wrapper">
+
+    <ul>
+        <li class="left"><a href="/">Главная</a></li>
+        <li class="left"><a href="/api/vacancy/?page=1">Вакансии</a></li>
+        <li class="left"><a href="/api/cv/?page=1">Резюме</a></li>
+        <li class="left"><a href="/api/parser">Обновить базу данных</a></li>
+
+        {{#if user}}
+            <li class="right"><a href="/api/auth/logout"
+                                 class="modal-trigger">Выйти</a></li>
+            <li class="right"><a href="/profile"
+                                 class="modal-trigger">Профиль</a></li>
+        {{else}}
+            <li class="right"><a href="#register"
+                                 class="modal-trigger">Регистрация</a></li>
+            <li class="right"><a href="#login" class="modal-trigger">Логин</a></li>
+
+            <div class="modal" id="register">
+                <div class="modal-content">
+                    <form id="regForm">
+                        <div class="input-field">
+                            <input type="text" id="name" name="name">
+                            <label class="active" for="name">Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" id="email" name="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="password" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio"
+                                       value="employee"/>
+                                <span>Соискатель</span>
+                            </label>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio"
+                                       value="employer"/>
+                                <span>Работадатель</span>
+                            </label>
+                        </p>
+                        <div>
+                            <button class="btn" type="submit" action="">Submit
+
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal" id="login">
+                <div class="modal-content">
+                    <form id="logForm">
+                        <div class="input-field">
+                            <input type="email" id="email" name="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="password" name="password">
+                            <label for="password">password</label>
+                        </div>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio"
+                                       value="employee"/>
+                                <span>Соискатель</span>
+                            </label>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio"
+                                       value="employer"/>
+                                <span>Работадатель</span>
+                            </label>
+                        </p>
+                        <div>
+                            <button class="btn" type="submit" action="">Submit
+
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        {{/if}}
+
+    </ul>
+
+</nav>
+{{{body}}}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script >
+    $(document).ready(function(){
+        $('.modal').modal();
+    });
+</script>
+</body>
+</html>
